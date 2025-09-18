@@ -7,7 +7,7 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
+		"ghcr.io/devcontainers-extra/features/bash-command:1": {
 			"command": "sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list.d/debian.sources"
 		}
 	},
@@ -44,6 +44,16 @@
 				"python.analysis.cachingLevel": "Library",
 				"python.analysis.memory.keepLibraryAst": true,
 				"python.analysis.memory.keepLibraryLocalVariables": true,
+				"python.analysis.diagnosticSeverityOverrides": {
+					"reportUnknownVariableType": "none",
+					"reportUnknownArgumentType": "none",
+					"reportUnknownLambdaType": "none",
+					"reportUnknownMemberType": "none",
+					"reportUnknownParameterType": "none",
+					"reportMissingParameterType": "none",
+					"reportMissingTypeArgument": "none",
+					"reportMissingTypeStubs": "none"
+				},
 				"[python]": {
 					"editor.formatOnSave":  true,
 					"editor.defaultFormatter": "charliermarsh.ruff",
